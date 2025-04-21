@@ -1,0 +1,15 @@
+version: 0.1
+phases:
+    pre_build:
+        commands:
+          - echo installing dependencies...
+          - npm install
+    build:
+        commands:
+          - echo building...
+          - npm run build
+artifacts:
+    files:
+        - "**/*"
+    discard-paths: no
+    base-directory: dist
